@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: whitesmoke;
+    background-image: url('jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg');
+}
+.register-circle{
+    width:15rem;
+    height:15rem;
+    background-color: #023430;
+    color:white;
+    border-radius: 80%;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    margin:10px;
+    font-size:1.5rem;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation:rotate 8s linear infinite;
+}
+@keyframes rotate{
+    from{
+       transform:scale(0);
+       background-color: #438d87;
+}
+to{
+    transform:scale(0.8);
+}
+}
+
+.form-container{
+    width:400px;
+    background-color: #023430;
+    height:auto;
+    margin:50px auto;
+    border-radius: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:30px 20px;
+}
+input,textarea,#country-dropdown{
+   padding: 10px;
+   margin:20px;
+   background-color: white;
+   border-radius: 5px;
+   border:none;
+   outline:none;
+   width:80%;
+}
+input:focus,textarea:focus,#country-dropdown:focus{
+    border:2px solid #438d87;
+}
+input[type='radio']{
+    padding:0px;
+    margin:0px;
+    border-radius:0px;
+    width:20px;
+}
+label{
+    color:white;
+}
+.radio-container{
+    width:80%;
+    display:flex;
+    justify-content: space-between;
+}
+
+ input[type='checkbox']{
+    margin:0px 20px;
+    border-radius:0px;
+    width:15px;
+}
+.checkbox-container{
+    margin-top:20px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width:80%;
+} 
+#submit-btn{
+    background-color: #438d87;
+    border:none;
+    color:white;
+    border-radius: 5px;
+    padding:10px 20px;
+    font-size:18px;
+    margin-top:20px;
+}
+
+#submit-btn:hover{
+   transform:scale(1.1);
+   cursor:pointer;
+}
+
+.password-container{
+    display: flex;
+   justify-content: center;
+    width:100%;
+    position: relative;
+}
+#password-toggle-icon{
+    position: absolute;
+    top:35%;
+    right:60px;
+}
+.password-icon{
+    font-size:1rem;
+}
+#password-btn{
+    background-color:none;
+    border:none;
+   
+}

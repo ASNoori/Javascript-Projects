@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Slider</title>
+</head>
+<body>
+   <img name='slide' width='400' height='300' src=''/>
+   <script>
+const image = ['./image1.jpg','./image2.jpg','./image3.jpg','./image4.jpg'];
+
+let i=0;
+function changeImg(){
+document.slide.src=image[i];
+if(i<image.length-1){
+    i++;
+}
+else{
+    i=0;
+}
+setTimeout(changeImg,1000);
+console.log('called timeout')
+}
+window.onload=changeImg;
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link href="./registerform.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/dcd4357263.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- <section class="register-circle">
+      Register here!
+    </section> -->
+    <form class="form-container">
+      <input
+        type="text"
+        id="fullname"
+        name="fullname"
+        placeholder="Fullname"
+        required
+      />
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Username"
+        required
+      />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        required
+      />
+      <article class="password-container">
+      <input
+        type="password"
+        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{6,16}"
+        title="Password must contain letters, numbers, and at least one special character (!@#$%^&*())"
+        id="password"
+        name="password"
+        placeholder="Password"
+        autocomplete="current-password"
+        required
+      />
+      <span id="password-toggle-icon">
+      <button id="password-btn"><i class="fa-regular fa-eye password-icon"></i></button>
+    </span>
+      <!-- <i class="fa-regular fa-eye-slash"></i> -->
+      <!-- <button class="password-btn">
+        <i class="fa-regular fa-eye"></i>
+      </button> -->
+    </article>
+      <input
+        type="text"
+        title="Phone number must be atleast 6 digits and not more than 12 digits"
+        id="phone"
+        name="phone"
+        placeholder="Phonenumber"
+        pattern="[0-9]{6,12}"
+        required
+      />
+      <select id="country-dropdown" required>
+        <option value="" disabled selected>Select Country</option>
+      </select>
+      <textarea
+        id="comments"
+        name="comments"
+        rows="4"
+        cols="50"
+        placeholder="Your Comments..."
+      ></textarea>
+      <section class="radio-container">
+        <label for="gender">Gender</label>
+        <label for="male">
+        <input type="radio" id="male" name="gender" value="male" required/>
+        male
+        </label>
+        <label for="female">
+        <input type="radio" id="female" name="gender" value="female" required/>
+        female
+      </label>
+      </section>
+      <!-- id,for should be equal -->
+      <section class="checkbox-container">
+      <input type="checkbox" id="terms" name="terms" required> 
+      <label for="terms">I agree to terms and conditons</label>
+    </section>
+    <button type="submit" id="submit-btn">Register</button>
+    </form>
+    <script src="./registerform.js"></script>
+  </body>
+</html>

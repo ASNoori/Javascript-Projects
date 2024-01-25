@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./navbar.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dcd4357263.js" crossorigin="anonymous"></script>
+    <title>Responsive Navbar</title>
+</head>
+<body>
+    <nav>
+        <label class="logo">DesignX</label>
+        <ul>
+            <li><a href='#'>Home</a></li>
+            <li><a href='#'>About</a></li>
+            <li><a href='#'>Services</a></li>
+            <li><a href='#'>Contact</a></li>
+            <li><a href='#'>Feedback</a></li>     
+        </ul>
+            <i class="fa-solid fa-bars"></i>
+    </nav>
+    <script>
+         const ico = document.querySelector('i');
+        if(screen.width<=900){
+           ico.classList.add('showicon')
+        }
+        ico.addEventListener('click',()=>{
+            const navUl = document.querySelector('nav ul');
+        navUl.classList.toggle('show');
+           })
+        
+
+       
+    </script>
+</body>
+</html>
