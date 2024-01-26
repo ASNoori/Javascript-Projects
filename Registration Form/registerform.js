@@ -24,6 +24,9 @@ formElement.addEventListener('submit',(e)=>{
 e.preventDefault();
 const formData = new FormData(formElement);
 console.log(Object.fromEntries(formData));
+// Object.fromEntries-convert array of keyvalues pairs into object[['a':1],['b',2]]-->{a:1,b:2}
+// Object.entries-convert object into array
+localStorage.setItem('formdatakey',JSON.stringify(Object.fromEntries(formData)));
 // post request
 fetch(registerapiurl,{
     method:'POST',
